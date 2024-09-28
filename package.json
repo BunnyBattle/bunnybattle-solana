@@ -2,11 +2,15 @@
   "license": "ISC",
   "scripts": {
     "lint:fix": "prettier */*.js \"*/**/*{.js,.ts}\" -w",
-    "lint": "prettier */*.js \"*/**/*{.js,.ts}\" --check"
+    "lint": "prettier */*.js \"*/**/*{.js,.ts}\" --check",
+    "prepare:submodules": "cd groth16-solana && npm i",
+    "compile:keys": "cd ./circuits && ./circuits.sh"
   },
   "dependencies": {
     "@coral-xyz/anchor": "^0.30.1",
-    "ffjavascript": "^0.3.0"
+    "circomlib": "^2.0.5",
+    "ffjavascript": "^0.3.0",
+    "snarkjs": "^0.7.4"
   },
   "devDependencies": {
     "@types/bn.js": "^5.1.0",
